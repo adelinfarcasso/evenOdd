@@ -1,0 +1,13 @@
+<div class="container">
+  <p><strong>Component 1 (holds setInterval)</strong></p>
+  <app-game-control (gameStarted)="gameStart($event)"></app-game-control>
+  <p><strong>Component 2 (displays from root odd no(s))</strong></p>
+  <app-odd
+    ><span> {{ odd.join(", ") }} </span></app-odd
+  >
+  <p><strong>Component 3 (displays from root even no(s))</strong></p>
+  <app-even [even]="even"> </app-even>
+  <p><strong>Root (receives data from Comp. 1)</strong></p>
+  <div>Current number: {{ currentReceivedNum }}</div>
+  <!-- (buzz)="receiveBuzz() -->
+</div>
